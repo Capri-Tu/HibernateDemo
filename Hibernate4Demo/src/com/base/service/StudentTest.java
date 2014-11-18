@@ -34,7 +34,7 @@ public class StudentTest {
                 sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();  
             } catch (Throwable ex) {  
                 // Log the exception.   
-                System.err.println("�Բ�����ݹ�������ʧ��." + ex);  
+                System.err.println("对不起数据工厂构建失败" + ex);  
                 throw new ExceptionInInitializerError(ex);  
             }  
         
