@@ -4,22 +4,22 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <!--æ˜¾ç¤ºæ‰§è¡Œçš„SQLè¯­å¥-->
+        <!--ÏÔÊ¾Ö´ÐÐµÄSQLÓï¾ä-->
         <property name="show_sql">true</property>
-        <!--è¿žæŽ¥åœ°å€-->
+        <!--Á¬½ÓµØÖ·-->
         <property name="connection.url">jdbc:sqlserver://127.0.0.1:1433;DatabaseName=hibernate</property>
-        <property name="connection.username">sa</property><!--è¿žæŽ¥æ•°æ®åº“çš„ç”¨æˆ·å-->
-        <property name="connection.password">ea1111111111_</property><!--æ•°æ®åº“ç”¨æˆ·å¯†ç -->
+        <property name="connection.username">sa</property><!--Á¬½ÓÊý¾Ý¿âµÄÓÃ»§Ãû-->
+        <property name="connection.password">ea1111111111_</property><!--Êý¾Ý¿âÓÃ»§ÃÜÂë-->
         
-        <!--æ•°æ®åº“é©±åŠ¨-->
+        <!--Êý¾Ý¿âÇý¶¯-->
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <!--JDBCè¿žæŽ¥æ± ï¼ˆä½¿ç”¨å†…ç½®çš„è¿žæŽ¥æ± ï¼‰-->
+        <!--JDBCÁ¬½Ó³Ø£¨Ê¹ÓÃÄÚÖÃµÄÁ¬½Ó³Ø£©-->
         <property name="connection.pool_size">1</property>
-        <!--è®¾ç½®Hibernateè‡ªåŠ¨ç®¡ç†ä¸Šä¸‹æ–‡çš„ç­–ç•¥-->
+        <!--ÉèÖÃHibernate×Ô¶¯¹ÜÀíÉÏÏÂÎÄµÄ²ßÂÔ-->
         <property name="current_session_context_class">thread</property>
-        <!--é€‰æ‹©ä½¿ç”¨çš„æ–¹è¨€-->
+        <!--Ñ¡ÔñÊ¹ÓÃµÄ·½ÑÔ-->
         <property name="dialect">org.hibernate.dialect.SQLServer2005Dialect</property>
-        <!--åœ¨å¯åŠ¨æ—¶åˆ é™¤å¹¶é‡æ–°åˆ›å»ºæ•°æ®åº“-->
+        <!--ÔÚÆô¶¯Ê±É¾³ý²¢ÖØÐÂ´´½¨Êý¾Ý¿â-->
 <!--         <property name="hbm2ddl.auto">create</property> -->
         
         <mapping resource="com/base/model/Student.hbm.xml"/>	

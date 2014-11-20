@@ -28,6 +28,13 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
+	/* （非 Javadoc）
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + "]";
+	}
 	
 	
 }
