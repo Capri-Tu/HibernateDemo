@@ -15,10 +15,10 @@ import org.hibernate.internal.util.config.ConfigurationHelper;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
-import com.base.model.Student;
+import com.base.model.Teacher;
 import com.base.util.HibernateUtil;
 
-public class StudentTest {
+public class TeacherTest {
 	
 	SessionFactory sessionFactory = HibernateUtil.getSessionFactory();	//由于每个步骤都会用到所以移到外面来
 
@@ -33,7 +33,7 @@ public class StudentTest {
 		session.beginTransaction();	//开启事物
 
 		//简单添加示例
-		Student s = new Student();		//创建一个学生
+		Teacher s = new Teacher();		//创建一个学生
 		s.setName("zhansan");			//设置名称
 		session.save(s);				//保存学生
 		
@@ -49,8 +49,8 @@ public class StudentTest {
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物
 
-		Student student = (Student) session.get(Student.class, Integer.valueOf(1));	//取得对象
-		session.delete(student);		
+		Teacher Teacher = (Teacher) session.get(Teacher.class, Integer.valueOf(1));	//取得对象
+		session.delete(Teacher);		
 		
 		session.getTransaction().commit();	//提交事务
 		session.close();					//关闭session
@@ -64,9 +64,9 @@ public class StudentTest {
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物
 
-		Student student = (Student) session.get(Student.class, Integer.valueOf(2));
-		student.setName("张三");
-		session.save(student);
+		Teacher Teacher = (Teacher) session.get(Teacher.class, Integer.valueOf(2));
+		Teacher.setName("张三");
+		session.save(Teacher);
 		
 		session.getTransaction().commit();	//提交事务
 		session.close();					//关闭session
@@ -75,18 +75,18 @@ public class StudentTest {
 	
 	/**
 	 * 打印所有数据表内容
-	 * 创建Student的题toString方法
+	 * 创建Teacher的题toString方法
 	 */
-	private void getAllStudent() {
+	private void getAllTeacher() {
 		// TODO 自动生成的方法存根
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物
 
-		String hql = "from Student";	//from 类, 内部封装类转表
+		String hql = "from Teacher";	//from 类, 内部封装类转表
 		Query quert = session.createQuery(hql);	
-		List<Student> studentList = quert.list();
-		for (Student student : studentList) {
-			System.out.println(student.toString());
+		List<Teacher> TeacherList = quert.list();
+		for (Teacher Teacher : TeacherList) {
+			System.out.println(Teacher.toString());
 		}
 		
 		session.getTransaction().commit();	//提交事务
@@ -98,10 +98,10 @@ public class StudentTest {
 	 */
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		StudentTest studentTest = new StudentTest();
-		studentTest.add();
-		//studentTest.delete();
-		//studentTest.update();
-		//studentTest.getAllStudent();
+		TeacherTest TeacherTest = new TeacherTest();
+		//TeacherTest.add();
+		//TeacherTest.delete();
+		//TeacherTest.update();
+		TeacherTest.getAllTeacher();
 	}
 }
