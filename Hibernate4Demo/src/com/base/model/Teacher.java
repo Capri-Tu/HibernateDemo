@@ -20,7 +20,7 @@ public class Teacher {
 
 	@Id			//设置主键
 	@GeneratedValue(generator="_native")	//注册主属性的生成策略, 使用生成策略
-	@GenericGenerator(name="_native",strategy="increment")	//生成策略,定义
+	@GenericGenerator(name="_native",strategy="native")	//生成策略,定义
 	public int getId() {
 		return id;
 	}

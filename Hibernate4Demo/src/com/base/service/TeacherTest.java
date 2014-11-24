@@ -25,7 +25,7 @@ public class TeacherTest {
 	/**
 	 * 添加
 	 */
-	private void add() {
+	public void add() {
 		// TODO 自动生成的方法存根
 		
         //只有通过session才能进行对象的操作, 获得持久化
@@ -44,7 +44,7 @@ public class TeacherTest {
 	/**
 	 * 删除
 	 */
-	private void delete() {
+	public void delete() {
 		// TODO 自动生成的方法存根
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物
@@ -59,7 +59,7 @@ public class TeacherTest {
 	/**
 	 * 更新
 	 */
-	private void update() {
+	public void update() {
 		// TODO 自动生成的方法存根
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物
@@ -77,7 +77,7 @@ public class TeacherTest {
 	 * 打印所有数据表内容
 	 * 创建Teacher的题toString方法
 	 */
-	private void getAllTeacher() {
+	public void getAllTeacher() {
 		// TODO 自动生成的方法存根
 		Session session = sessionFactory.openSession();	//生成一个新的session
 		session.beginTransaction();	//开启事物

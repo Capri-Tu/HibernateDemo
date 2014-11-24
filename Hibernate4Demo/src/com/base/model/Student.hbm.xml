@@ -7,9 +7,12 @@
 
     <class name="Student" table="t_student">	<!-- 类名与对应的数据表名 -->
         <id name="id" column="stuId">			<!-- 字段名,设置主键 -->
-            <generator class="increment"/>
+            <generator class="native"/>
         </id>
         <property name="name"/>			<!--普通字段  -->
+        
+        <many-to-one name="c" column="classId" class="com.base.model.Class" cascade="save-update"></many-to-one>
+        			<!-- cascade="save-update": 级联更新 -->
     </class>
 
 </hibernate-mapping>

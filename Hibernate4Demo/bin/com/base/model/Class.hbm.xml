@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.base.model">
+
+    <class name="Class" table="t_class">	<!-- 类名与对应的数据表名 -->
+        <id name="id" column="classId">			<!-- 字段名,设置主键 -->
+            <generator class="native"/>
+        </id>
+        <property name="name" column="className"/>			<!--普通字段  -->
+        
+        <set name="students" cascade="save-update" inverse="true">				<!-- 对应的多对一映射 -->
+        	<key column="classId"></key>	<!-- 对应的外键 -->
+        	<one-to-many class="com.base.model.Student"/>	<!-- 设置一对多的相对类 -->
+        </set>
+    </class>
+
+</hibernate-mapping>

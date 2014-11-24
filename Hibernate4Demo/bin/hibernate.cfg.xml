@@ -26,6 +26,8 @@
 	    <property name="hbm2ddl.auto">update</property>
         
         <mapping resource="com/base/model/Student.hbm.xml"/>	<!-- xml版使用resource -->
+        <mapping resource="com/base/model/Class.hbm.xml"/>	<!-- xml版使用resource -->
+        <mapping resource="com/base/model/Node.hbm.xml"/>	<!-- xml版使用resource -->
         <mapping class="com.base.model.Teacher"/>		<!-- 注解版使用class -->
     </session-factory>
 </hibernate-configuration>

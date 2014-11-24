@@ -1,3 +1,6 @@
+/**
+ * 使用了main函数测试,其他Test2->*,使用了JUnit
+ */
 package com.base.service;
 
 import java.util.List;

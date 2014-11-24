@@ -4,6 +4,19 @@ public class Student {
 	
 	private int id;
 	private String name;
+	private Class c;
+	/**
+	 * @return c
+	 */
+	public Class getC() {
+		return c;
+	}
+	/**
+	 * @param c 要设置的 c
+	 */
+	public void setC(Class c) {
+		this.c = c;
+	}
 	/**
 	 * @return id
 	 */
